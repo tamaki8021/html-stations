@@ -1,3 +1,5 @@
-export const getData = () => {
+const getData = () => {
     return "Arrow";
 }
+
+export default getData;
