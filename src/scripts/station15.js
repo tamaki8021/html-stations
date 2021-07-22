@@ -20,17 +20,17 @@ async function getData() {
   ];
   const result = await test({ userList });
   console.log(result);
+  await sleep(3000);
   return await result;
 }
+
+const sleep = (time) => new Promise((resolve) => setTimeout(resolve, time));
 
 function test({ userList }) {
   const newUserList = userList.map((user) => {
     const fullName = [user.family_name, user.first_name];
-    return { ...userList, full_name: fullName.join(" ") };
+    return { ...user, full_name: fullName.join(" ") };
   });
-  setTimeout(() => {
-    console.log("3秒経過");
-  }, 3000);
   console.log(newUserList);
   return newUserList;
-}
+};
