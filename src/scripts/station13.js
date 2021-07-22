@@ -1,5 +1,2 @@
-const getData = () => {
-    return "Arrow";
-}
+const getData = () => "Arrow";
 
-export default getData;
