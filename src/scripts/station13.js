@@ -1,1 +1,3 @@
-export const getData = () => "Arrow";
+const getData = () => "Arrow";
+
+export default getData;
